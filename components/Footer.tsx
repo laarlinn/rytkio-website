@@ -10,8 +10,7 @@ export default function Footer() {
             {site.legalName}
           </p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-cream/80">
-            Tuoremehuasema ja lihankäsittelytilat Multialla. Hyväksytty
-            elintarvikehuoneisto.
+            Tuoremehuasema ja lihankäsittelytilat Multialla.
           </p>
           <a
             href={site.oivaReportUrl}
@@ -19,7 +18,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="mt-4 inline-flex items-center gap-2 rounded-full border border-cream/30 px-4 py-1.5 text-sm text-cream/90 transition-colors hover:border-cream hover:text-paper"
           >
-            <span aria-hidden>😊</span> Oiva-raportti: Oivallinen
+            Oiva-raportti
           </a>
         </div>
 

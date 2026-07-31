@@ -56,7 +56,7 @@ export default function Tuoremehuasema() {
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cream/90">
             Tuoremehulaitteistolla puristetaan omenoista tuoremehua nopeasti ja
-            hygieenisesti pääasiassa 3 litran hanapakkauksiin.
+            hygieenisesti.
           </p>
         </div>
       </section>
@@ -215,12 +215,12 @@ export default function Tuoremehuasema() {
               <h3 className="font-display text-lg font-semibold text-paper">
                 Hyvä tietää
               </h3>
+              <p className="mt-3 rounded-lg bg-paper/10 p-3 text-sm font-semibold leading-relaxed text-paper ring-1 ring-inset ring-paper/20">
+                Ota mukaan nimelläsi merkattuja muovilaatikoita tai
+                tukevapohjaisia pahvilaatikoita, joihin laitamme valmiit
+                hanapakkaukset.
+              </p>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-cream/90">
-                <li>
-                  Ota mukaan nimelläsi merkattuja muovilaatikoita tai
-                  tukevapohjaisia pahvilaatikoita, joihin laitamme valmiit
-                  hanapakkaukset.
-                </li>
                 <li>
                   Valmiiden hanapakkauksien lämpötila on noin 80 astetta
                   luovutettaessa, eikä niitä voi pinota päällekkäin.
