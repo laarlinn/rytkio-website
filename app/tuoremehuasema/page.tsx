@@ -29,7 +29,7 @@ const steps = [
     text: "Mehu siirtyy suoraan pastörointilaitteeseen. Mehun lämpötila on pastöroinnin jälkeen noin 85 astetta. Asiakkaan astioihin voidaan toimittaa myös pastöroimatonta mehua.",
   },
   {
-    title: "Hanapakkaus",
+    title: "Pakkaus",
     text: "Valmis mehu pakataan pääasiassa 3 litran hanapakkauksiin, joissa mehu säilyy avaamattomana ja viileässä säilytettynä noin vuoden.",
   },
 ];
@@ -61,9 +61,34 @@ export default function Tuoremehuasema() {
         </div>
       </section>
 
+      {/* Garland divider over the hero/background seam: overlapping copies
+          (every other one mirrored) loop the garland across any width */}
+      <div aria-hidden className="pointer-events-none relative z-10 -mt-12 h-24 overflow-hidden">
+        <div className="absolute left-1/2 flex -translate-x-1/2">
+          {Array.from({ length: 10 }).map((_, i) => (
+            <Image
+              key={i}
+              src="/images/deco/divider.png"
+              alt=""
+              width={1536}
+              height={300}
+              className={`-mx-9 h-24 w-auto max-w-none ${i % 2 ? "-scale-x-100" : ""}`}
+            />
+          ))}
+        </div>
+      </div>
+
       {/* Season callout */}
-      <section className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="mt-10 rounded-2xl bg-barn p-7 text-paper shadow-lift sm:flex sm:items-center sm:justify-between sm:gap-6">
+      <section className="relative isolate mx-auto max-w-6xl px-4 sm:px-6">
+        <Image
+          src="/images/deco/omenaterttu.png"
+          alt=""
+          aria-hidden
+          width={666}
+          height={1000}
+          className="absolute -top-36 right-10 -z-10 hidden w-40 md:block"
+        />
+        <div className="sketch-2 mt-10 border-barn-dark bg-barn p-7 text-paper shadow-lift sm:flex sm:items-center sm:justify-between sm:gap-6">
           <div>
             <p className="font-display text-2xl font-semibold">
               🍎 {site.season.banner}
@@ -116,8 +141,11 @@ export default function Tuoremehuasema() {
                 { value: "50–70 %", label: "mehuntuotto" },
                 { value: "~1 h", label: "mehustus / 100 kg" },
                 { value: "50 kg", label: "pienin erä" },
-              ].map((s) => (
-                <div key={s.label} className="rounded-xl bg-paper p-4 text-center shadow-lift">
+              ].map((s, i) => (
+                <div
+                  key={s.label}
+                  className={`${["sketch", "sketch-2", "sketch-3"][i % 3]} border-spruce/40 bg-paper p-4 text-center shadow-lift`}
+                >
                   <p className="font-display text-xl font-semibold text-barn sm:text-2xl">
                     {s.value}
                   </p>
@@ -126,10 +154,10 @@ export default function Tuoremehuasema() {
               ))}
             </div>
           </div>
-          <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-lift">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-lift">
             <Image
-              src="/images/omena.jpg"
-              alt="Kypsiä punaisia omenoita puussa"
+              src="/images/mehu_hanapakkaus.jpg"
+              alt="Tuoremehua hanapakkauksessa ja lasissa omenalaatikoiden keskellä"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover"
@@ -140,13 +168,24 @@ export default function Tuoremehuasema() {
 
       {/* Process steps */}
       <section className="bg-sand/60 py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="relative isolate mx-auto max-w-6xl px-4 sm:px-6">
+          <Image
+            src="/images/deco/oksa.png"
+            alt=""
+            aria-hidden
+            width={1000}
+            height={666}
+            className="absolute -top-12 right-0 -z-10 hidden w-64 md:block"
+          />
           <h2 className="font-display text-3xl font-semibold">
             Näin mehustus etenee
           </h2>
           <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, i) => (
-              <li key={step.title} className="rounded-2xl bg-paper p-6 shadow-lift">
+              <li
+                key={step.title}
+                className={`${["sketch", "sketch-2", "sketch-3", "sketch-2"][i % 4]} border-spruce/40 bg-paper p-6 shadow-lift`}
+              >
                 <p className="font-display text-3xl font-semibold text-barn/40">
                   {String(i + 1).padStart(2, "0")}
                 </p>
@@ -164,9 +203,19 @@ export default function Tuoremehuasema() {
 
       {/* Price list */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6" id="hinnasto">
-        <h2 className="font-display text-3xl font-semibold">Hinnasto</h2>
+        <h2 className="flex items-end gap-4 font-display text-3xl font-semibold">
+          Hinnasto
+          <Image
+            src="/images/deco/omena.png"
+            alt=""
+            aria-hidden
+            width={600}
+            height={900}
+            className="w-12 rotate-3"
+          />
+        </h2>
         <div className="mt-8 grid gap-8 lg:grid-cols-[1.5fr_1fr]">
-          <div className="overflow-hidden rounded-2xl bg-paper shadow-lift">
+          <div className="sketch overflow-hidden border-spruce/40 bg-paper shadow-lift">
             <table className="w-full text-left">
               <caption className="sr-only">Tuoremehuaseman hinnasto</caption>
               <thead>
@@ -198,7 +247,7 @@ export default function Tuoremehuasema() {
           </div>
 
           <div className="space-y-6">
-            <div className="rounded-2xl bg-paper p-6 shadow-lift">
+            <div className="sketch-2 border-spruce/40 bg-paper p-6 shadow-lift">
               <h3 className="font-display text-lg font-semibold">
                 Määräalennukset
               </h3>
@@ -211,7 +260,7 @@ export default function Tuoremehuasema() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl bg-spruce p-6 text-cream shadow-lift">
+            <div className="sketch-3 border-spruce-light bg-spruce p-6 text-cream shadow-lift">
               <h3 className="font-display text-lg font-semibold text-paper">
                 Hyvä tietää
               </h3>
@@ -237,7 +286,16 @@ export default function Tuoremehuasema() {
 
       {/* Booking */}
       <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
-        <div className="rounded-2xl bg-sand/70 p-8 text-center sm:p-12">
+        <div className="relative">
+          <Image
+            src="/images/deco/omenat.png"
+            alt=""
+            aria-hidden
+            width={1000}
+            height={666}
+            className="absolute -top-20 left-1/2 z-10 w-48 -translate-x-1/2 sm:w-56"
+          />
+          <div className="sketch border-barn/40 bg-sand/70 p-8 pt-20 text-center sm:p-12 sm:pt-24">
           <h2 className="font-display text-3xl font-semibold">
             Ajanvaraukset ja kyselyt
           </h2>
@@ -254,6 +312,7 @@ export default function Tuoremehuasema() {
             Soita {site.phone.tuoremehuasema.display}{" "}
             <span className="font-normal">({site.phone.tuoremehuasema.note})</span>
           </a>
+          </div>
         </div>
       </section>
     </>

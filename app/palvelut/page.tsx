@@ -35,7 +35,15 @@ const services = [
 
 export default function Palvelut() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <section className="relative isolate mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <Image
+        src="/images/deco/omenapuu.png"
+        alt=""
+        aria-hidden
+        width={800}
+        height={1200}
+        className="absolute right-10 top-8 -z-10 hidden w-44 md:block"
+      />
       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-barn">
         {site.name}
       </p>

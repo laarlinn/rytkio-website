@@ -149,7 +149,15 @@ export default function Home() {
       </section>
 
       {/* Contact cards */}
-      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+      <section className="relative isolate mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <Image
+          src="/images/deco/omenapuu.png"
+          alt=""
+          aria-hidden
+          width={800}
+          height={1200}
+          className="absolute right-10 top-4 -z-10 hidden w-48 lg:block"
+        />
         <h2 className="font-display text-3xl font-semibold sm:text-4xl">
           Ota yhteyttä
         </h2>
