@@ -67,9 +67,7 @@ export default function Footer() {
 
       <div className="border-t border-cream/15">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-xs text-cream/60 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p>
-            © {new Date().getFullYear()} {site.legalName}
-          </p>
+          <p>Nettisivut tarjoaa ja kehittää A.L.</p>
           <p>
             Kohdetta on tuettu Manner-Suomen maaseudun kehittämisohjelmasta
             (Euroopan maaseudun kehittämisen maatalousrahasto).
