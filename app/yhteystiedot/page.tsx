@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 };
 
 const mapEmbedUrl =
-  "https://www.openstreetmap.org/export/embed.html?bbox=24.606800079345707%2C62.35359220135264%2C24.833393096923828%2C62.42376416825578&layer=mapnik&marker=62.38869872387649%2C24.720096588134766";
+  "https://maps.google.com/maps?q=62.38869872387649,24.720096588134766&z=13&hl=fi&output=embed";
 const mapLargeUrl =
-  "https://www.openstreetmap.org/?mlat=62.3887&mlon=24.7201#map=13/62.3887/24.7201";
+  "https://www.google.com/maps/search/?api=1&query=62.38869872387649,24.720096588134766";
 
 export default function Yhteystiedot() {
   return (
