@@ -33,8 +33,8 @@ export const inquiries = [
 ];
 
 export const priceList = [
-  { item: "Omenamehu, pastöroitu", detail: "pesu, murskaus ja puristus sekä pastörointi", price: "1,35 €/kilo" },
-  { item: "Omenamehu, pastöroimaton", detail: "pesu, murskaus ja puristus", price: "1,10 €/kilo" },
+  { item: "Omenamehu, pastöroitu", detail: "", price: "1,35 €/kilo" },
+  { item: "Omenamehu, pastöroimaton", detail: "", price: "1,10 €/kilo" },
   { item: "Hanapakkaus, 2 litraa", detail: "", price: "1,25 €/kpl" },
   { item: "Hanapakkaus, 3 litraa", detail: "", price: "1,30 €/kpl" },
   { item: "Hanapakkaus, 5 litraa", detail: "", price: "1,50 €/kpl" },
