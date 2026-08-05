@@ -27,9 +27,8 @@ export const site = {
 };
 
 export const inquiries = [
-  { name: "Mikko Linna", phone: { display: "0400 859 614", tel: "+358400859614" } },
-  { name: "Vesa Mäenpää", phone: { display: "040 576 2406", tel: "+358405762406" } },
-  { name: "Antti Solismaa", phone: { display: "050 401 0645", tel: "+358504010645" } },
+  { name: "Arto Linna", phone: { display: "040 867 4310", tel: "+358408674310" } },
+  { name: "Otto Linna", phone: { display: "044 205 6665", tel: "+358442056665" } },
 ];
 
 export const priceList = [

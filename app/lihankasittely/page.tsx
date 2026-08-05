@@ -5,12 +5,12 @@ import { site, inquiries } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Lihankäsittelytilat ja -palvelut",
   description:
-    "Hirvi- ja peuranmetsästäjille nylkytilat, jäähdyttämö ja leikkaustilat sekä jauhatus ja vakuumipakkaus Multialla — myös avaimet käteen -periaatteella.",
+    "Hirven- ja peuranmetsästäjille hirven tai peuran lihankäsittely palveluna tapauskohtaisesti sovittavalla tavalla Multialla.",
   alternates: { canonical: "/lihankasittely/"},
   openGraph: {
     title: `Lihankäsittelytilat ja -palvelut | ${site.name}`,
     description:
-      "Hirvi- ja peuranmetsästäjille nylkytilat, jäähdyttämö ja leikkaustilat sekä jauhatus ja vakuumipakkaus Multialla.",
+      "Hirven- ja peuranmetsästäjille hirven tai peuran lihankäsittely palveluna tapauskohtaisesti sovittavalla tavalla Multialla.",
     images: [{ url: "/images/ll_1.jpg" }],
   },
 };
@@ -62,10 +62,6 @@ export default function Lihankasittely() {
           <h1 className="font-display mt-2 text-4xl font-semibold text-paper sm:text-5xl">
             Lihankäsittelytilat ja&nbsp;-palvelut
           </h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cream/90">
-            Hirvi- ja peuranmetsästäjille tarjoamme nylkytilat, jäähdyttämön ja
-            leikkaustilat sekä jauhatuksen jauhelihaksi.
-          </p>
         </div>
       </section>
 
@@ -74,20 +70,24 @@ export default function Lihankasittely() {
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr]">
           <div className="space-y-4 leading-relaxed text-ink-soft">
             <p>
-              Hirvi- ja peuranmetsästäjille tarjoamme nylkytilat, jäähdyttämön
-              ja leikkaustilat sekä jauhatuksen jauhelihaksi niin, että lihat
-              saadaan lopuksi pakattua vakuumipakkauksiin.
-            </p>
-            <p>
-              Metsästäjät voivat myös itse käyttää tilojamme niin sovittaessa
-              tai vaihtoehtoisesti lihat tehdään avaimet käteen -periaatteella
-              osuuskunnan jäsenten toimesta. Myöskin osa lihaketjun palveluista
-              on mahdollista toteuttaa.
+              Hirven- ja peuranmetsästäjille tarjoamme palveluna hirven tai
+              peuran lihankäsittelyn tapauskohtaisesti sovittavalla tavalla.
+              Lihankäsittelyssä käytämme ajanmukaista nylkytilaa, jäähdyttämöä
+              ja lihanleikkaustilaamme. Lihanleikkaustilassa pakkaamme lihat ja
+              jauhelihan vakuumipakkauksiin.
             </p>
             <p>
               Tilat ovat valoisat, uudet ja hygieeniset. Kaikki pinnat ovat
-              helposti painepesurilla pestäviä. Rakennuksessa on myös taukotila
-              pieniä kokouksia varten.
+              helposti painepesurilla pestäviä. Lihanleikkaustilassa meillä on
+              käytössä jauhelihan jauhatusvälineistö ja tehokkaat
+              vakumointivälineet.
+            </p>
+            <p>
+              Tarjoamme edellä mainittua palvelua lihankäsittelytilamme
+              mahdollistaman kapasiteetin puitteissa. Kapasiteetti on
+              rajallinen tilojen ollessa ensisijaisesti omistajaseurojen
+              käytössä. Vapaata kapasiteettia ja palveluita kannattaa kysyä ja
+              sopia hyvissä ajoin metsästyskauden lähestyessä.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -137,7 +137,7 @@ export default function Lihankasittely() {
           <p className="mt-2 text-cream/80">
             Kysy lisää tiloista ja palveluista:
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {inquiries.map((person) => (
               <a
                 key={person.name}

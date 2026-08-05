@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { site } from "@/lib/site";
+import { site, inquiries } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Yhteystiedot",
@@ -31,30 +31,6 @@ export default function Yhteystiedot() {
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         <div className="rounded-2xl bg-paper p-7 shadow-lift">
-          <h2 className="font-display text-xl font-semibold">
-            {site.legalName}
-          </h2>
-          <address className="mt-4 space-y-1 not-italic leading-relaxed text-ink-soft">
-            <p>{site.address.street}</p>
-            <p>
-              {site.address.postalCode} {site.address.city}
-            </p>
-            <p className="pt-3">
-              Puhelin:{" "}
-              <a href={`tel:${site.phone.osuuskunta.tel}`} className="font-medium text-barn hover:underline">
-                {site.phone.osuuskunta.display}
-              </a>
-            </p>
-            <p>
-              Sähköposti:{" "}
-              <a href={`mailto:${site.email}`} className="font-medium text-barn hover:underline">
-                {site.email}
-              </a>
-            </p>
-          </address>
-        </div>
-
-        <div className="rounded-2xl bg-paper p-7 shadow-lift">
           <h2 className="font-display text-xl font-semibold">Tuoremehuasema</h2>
           <address className="mt-4 space-y-1 not-italic leading-relaxed text-ink-soft">
             <p>{site.address.street}</p>
@@ -73,6 +49,26 @@ export default function Yhteystiedot() {
                 {site.email}
               </a>
             </p>
+          </address>
+        </div>
+
+        <div className="rounded-2xl bg-paper p-7 shadow-lift">
+          <h2 className="font-display text-xl font-semibold">
+            Lihankäsittelytilat ja -palvelut
+          </h2>
+          <address className="mt-4 space-y-1 not-italic leading-relaxed text-ink-soft">
+            <p>{site.address.street}</p>
+            <p>
+              {site.address.postalCode} {site.address.city}
+            </p>
+            {inquiries.map((person, i) => (
+              <p key={person.name} className={i === 0 ? "pt-3" : ""}>
+                {person.name}:{" "}
+                <a href={`tel:${person.phone.tel}`} className="font-medium text-barn hover:underline">
+                  {person.phone.display}
+                </a>
+              </p>
+            ))}
           </address>
         </div>
       </div>

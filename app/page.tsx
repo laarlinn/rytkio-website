@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/lib/site";
+import { site, inquiries } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <div className="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-end px-4 pb-16 pt-32 sm:px-6">
           <h1 className="font-display max-w-3xl text-4xl font-semibold leading-tight text-paper sm:text-5xl md:text-6xl">
-            Osuuskunta Rytkiön Riistavaja
+            Rytkiön Riistavaja
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-cream/90">
             Rakennuksessa on tuoremehuasema ja lihanjalostustilat. Tila on
@@ -105,9 +105,8 @@ export default function Home() {
                 Lihankäsittelytilat ja -palvelut
               </h3>
               <p className="mt-3 leading-relaxed text-ink-soft">
-                Hirvi- ja peuranmetsästäjille nylkytilat, jäähdyttämö ja
-                leikkaustilat sekä jauhatus ja vakuumipakkaus — myös avaimet
-                käteen -periaatteella.
+                Hirven- ja peuranmetsästäjille tarjoamme palveluna hirven tai
+                peuran lihankäsittelyn tapauskohtaisesti sovitulla tavalla.
               </p>
               <p className="mt-4 font-medium text-barn">Tutustu tiloihin →</p>
             </div>
@@ -149,42 +148,11 @@ export default function Home() {
       </section>
 
       {/* Contact cards */}
-      <section className="relative isolate mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <Image
-          src="/images/deco/omenapuu.png"
-          alt=""
-          aria-hidden
-          width={800}
-          height={1200}
-          className="absolute right-10 top-4 -z-10 hidden w-48 lg:block"
-        />
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <h2 className="font-display text-3xl font-semibold sm:text-4xl">
           Ota yhteyttä
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl bg-paper p-7 shadow-lift">
-            <h3 className="font-display text-xl font-semibold">
-              {site.legalName}
-            </h3>
-            <address className="mt-4 space-y-1 not-italic leading-relaxed text-ink-soft">
-              <p>{site.address.street}</p>
-              <p>
-                {site.address.postalCode} {site.address.city}
-              </p>
-              <p className="pt-3">
-                Puhelin:{" "}
-                <a href={`tel:${site.phone.osuuskunta.tel}`} className="font-medium text-barn hover:underline">
-                  {site.phone.osuuskunta.display}
-                </a>
-              </p>
-              <p>
-                Sähköposti:{" "}
-                <a href={`mailto:${site.email}`} className="font-medium text-barn hover:underline">
-                  {site.email}
-                </a>
-              </p>
-            </address>
-          </div>
           <div className="rounded-2xl bg-paper p-7 shadow-lift">
             <h3 className="font-display text-xl font-semibold">Tuoremehuasema</h3>
             <address className="mt-4 space-y-1 not-italic leading-relaxed text-ink-soft">
@@ -204,6 +172,25 @@ export default function Home() {
                   {site.email}
                 </a>
               </p>
+            </address>
+          </div>
+          <div className="rounded-2xl bg-paper p-7 shadow-lift">
+            <h3 className="font-display text-xl font-semibold">
+              Lihankäsittelytilat ja -palvelut
+            </h3>
+            <address className="mt-4 space-y-1 not-italic leading-relaxed text-ink-soft">
+              <p>{site.address.street}</p>
+              <p>
+                {site.address.postalCode} {site.address.city}
+              </p>
+              {inquiries.map((person, i) => (
+                <p key={person.name} className={i === 0 ? "pt-3" : ""}>
+                  {person.name}:{" "}
+                  <a href={`tel:${person.phone.tel}`} className="font-medium text-barn hover:underline">
+                    {person.phone.display}
+                  </a>
+                </p>
+              ))}
             </address>
           </div>
         </div>
