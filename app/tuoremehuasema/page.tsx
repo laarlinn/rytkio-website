@@ -94,7 +94,7 @@ export default function Tuoremehuasema() {
               🍎 {site.season.banner}
             </p>
             <p className="mt-1 text-cream/90">
-              Ajanvaraus avataan 3.8. — mehunpuristus tapahtuu pääsääntöisesti
+              Voit varata ajan jo nyt — mehunpuristus tapahtuu pääsääntöisesti
               viikonloppuisin.
             </p>
           </div>
