@@ -21,8 +21,8 @@ export const site = {
   },
   oivaReportUrl: "https://oivahymy.fi/api/raportti/215296",
   season: {
-    banner: "Syksyn 2026 mehustuskausi alkaa 15.8.",
-    booking: "Varaa aikasi nyt",
+    banner: "Mehustus loppuu 20.9.",
+    booking: "Kiitokset asiakkaille!",
   },
 };
 

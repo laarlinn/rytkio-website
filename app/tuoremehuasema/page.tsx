@@ -88,23 +88,13 @@ export default function Tuoremehuasema() {
           height={1000}
           className="absolute -top-36 right-10 -z-10 hidden w-40 md:block"
         />
-        <div className="sketch-2 mt-10 border-barn-dark bg-barn p-7 text-paper shadow-lift sm:flex sm:items-center sm:justify-between sm:gap-6">
-          <div>
-            <p className="font-display text-2xl font-semibold">
-              🍎 {site.season.banner}
-            </p>
-            <p className="mt-1 text-cream/90">
-              Voit varata ajan jo nyt — mehunpuristus tapahtuu pääsääntöisesti
-              viikonloppuisin.
-            </p>
-          </div>
-          <a
-            href={`tel:${site.phone.tuoremehuasema.tel}`}
-            className="mt-4 inline-block shrink-0 rounded-full bg-paper px-6 py-3 font-medium text-barn transition-colors hover:bg-cream sm:mt-0"
-          >
-            Varaa aika: {site.phone.tuoremehuasema.display}{" "}
-            <span className="font-normal">({site.phone.tuoremehuasema.note})</span>
-          </a>
+        <div className="sketch-2 mt-10 border-barn-dark bg-barn p-7 text-paper shadow-lift">
+          <p className="font-display text-2xl font-semibold">
+            🍎 {site.season.banner}
+          </p>
+          <p className="mt-1 text-cream/90">
+            Kiitokset asiakkaille!
+          </p>
         </div>
         <p className="mt-3 text-center text-sm text-ink-soft">
           Ajanvarauksen voi tehdä soittamalla numeroon{" "}
