@@ -82,7 +82,7 @@ export default function Home() {
                 pesu, murskaus, puristus ja pastörointi suoraan hanapakkaukseen.
               </p>
               <p className="mt-4 font-medium text-barn">
-                Hinnasto ja ajanvaraus →
+                Katso hinnasto →
               </p>
             </div>
           </Link>
@@ -161,12 +161,6 @@ export default function Home() {
                 {site.address.postalCode} {site.address.city}
               </p>
               <p className="pt-3">
-                Puhelin ({site.phone.tuoremehuasema.note}):{" "}
-                <a href={`tel:${site.phone.tuoremehuasema.tel}`} className="font-medium text-barn hover:underline">
-                  {site.phone.tuoremehuasema.display}
-                </a>
-              </p>
-              <p>
                 Sähköposti:{" "}
                 <a href={`mailto:${site.email}`} className="font-medium text-barn hover:underline">
                   {site.email}

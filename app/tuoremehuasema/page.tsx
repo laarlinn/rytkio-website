@@ -5,12 +5,12 @@ import { site, priceList, discounts } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Tuoremehuasema",
   description:
-    "Puristamme omenoistasi tuoremehua nopeasti ja hygieenisesti hanapakkauksiin Multialla. Katso hinnasto ja varaa mehustusaika.",
+    "Puristamme omenoistasi tuoremehua nopeasti ja hygieenisesti hanapakkauksiin Multialla. Katso hinnasto.",
   alternates: { canonical: "/tuoremehuasema/"},
   openGraph: {
     title: `Tuoremehuasema | ${site.name}`,
     description:
-      "Puristamme omenoistasi tuoremehua nopeasti ja hygieenisesti hanapakkauksiin Multialla. Katso hinnasto ja varaa mehustusaika.",
+      "Puristamme omenoistasi tuoremehua nopeasti ja hygieenisesti hanapakkauksiin Multialla. Katso hinnasto.",
     images: [{ url: "/images/mehustamo_1.jpg" }],
   },
 };
@@ -93,13 +93,9 @@ export default function Tuoremehuasema() {
             🍎 {site.season.banner}
           </p>
           <p className="mt-1 text-cream/90">
-            Kiitokset asiakkaille!
+            Kiitokset asiakkaille
           </p>
         </div>
-        <p className="mt-3 text-center text-sm text-ink-soft">
-          Ajanvarauksen voi tehdä soittamalla numeroon{" "}
-          {site.phone.tuoremehuasema.display} ({site.phone.tuoremehuasema.note}).
-        </p>
       </section>
 
       {/* Yield info */}
@@ -274,37 +270,6 @@ export default function Tuoremehuasema() {
         </div>
       </section>
 
-      {/* Booking */}
-      <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
-        <div className="relative">
-          <Image
-            src="/images/deco/omenat.png"
-            alt=""
-            aria-hidden
-            width={1000}
-            height={666}
-            className="absolute -top-20 left-1/2 z-10 w-48 -translate-x-1/2 sm:w-56"
-          />
-          <div className="sketch border-barn/40 bg-sand/70 p-8 pt-20 text-center sm:p-12 sm:pt-24">
-          <h2 className="font-display text-3xl font-semibold">
-            Ajanvaraukset ja kyselyt
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl leading-relaxed text-ink-soft">
-            Ajanvarauksen voi tehdä soittamalla numeroon{" "}
-            {site.phone.tuoremehuasema.display} ({site.phone.tuoremehuasema.note}).
-            Huomioithan, että mehunpuristus tapahtuu pääsääntöisesti
-            viikonloppuisin.
-          </p>
-          <a
-            href={`tel:${site.phone.tuoremehuasema.tel}`}
-            className="mt-6 inline-block rounded-full bg-barn px-8 py-3.5 font-medium text-paper shadow-lift transition-colors hover:bg-barn-dark"
-          >
-            Soita {site.phone.tuoremehuasema.display}{" "}
-            <span className="font-normal">({site.phone.tuoremehuasema.note})</span>
-          </a>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

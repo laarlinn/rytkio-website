@@ -38,12 +38,6 @@ export default function Yhteystiedot() {
               {site.address.postalCode} {site.address.city}
             </p>
             <p className="pt-3">
-              Puhelin ({site.phone.tuoremehuasema.note}):{" "}
-              <a href={`tel:${site.phone.tuoremehuasema.tel}`} className="font-medium text-barn hover:underline">
-                {site.phone.tuoremehuasema.display}
-              </a>
-            </p>
-            <p>
               Sähköposti:{" "}
               <a href={`mailto:${site.email}`} className="font-medium text-barn hover:underline">
                 {site.email}

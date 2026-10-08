@@ -21,8 +21,8 @@ export const site = {
   },
   oivaReportUrl: "https://oivahymy.fi/api/raportti/215296",
   season: {
-    banner: "Mehustus loppuu 20.9.",
-    booking: "Kiitokset asiakkaille!",
+    banner: "Mehustus on loppunut tältä kaudelta.",
+    booking: "Kiitokset asiakkaille",
   },
 };
 
